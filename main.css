@@ -240,7 +240,7 @@ div#panel:before {
 }
 
 #panel {
-	position: absolute;
+	position: relative;
 	background: #ff0000d0;
 	color: #ffffff;
 	font-family: Arial, Helvetica, serif;
