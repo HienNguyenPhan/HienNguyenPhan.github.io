@@ -63,6 +63,16 @@ abort.addEventListener("click", function () {
 });
 
 var no = document.getElementById("no");
+
+no.addEventListener("mouseover", function () {
+    // Set a random position for the button
+    var newX = Math.floor(Math.random() * window.innerWidth - noButton.offsetWidth);
+    var newY = Math.floor(Math.random() * window.innerHeight - noButton.offsetHeight);
+
+    // Apply the new position using CSS
+    noButton.style.transform = "translate(" + newX + "px, " + newY + "px)";
+});
+
 no.addEventListener("click", function () {
 	btn.classList.remove("pushed");
 	panel.classList.remove("show");
@@ -134,23 +144,3 @@ mute.addEventListener("click", function () {
 	}
 });
 
-var noButton = document.getElementById("no");
-
-noButton.addEventListener("mouseover", function () {
-    // Set a random position for the button
-    var newX = Math.floor(Math.random() * window.innerWidth - noButton.offsetWidth);
-    var newY = Math.floor(Math.random() * window.innerHeight - noButton.offsetHeight);
-
-    // Apply the new position using CSS
-    noButton.style.transform = "translate(" + newX + "px, " + newY + "px)";
-});
-
-noButton.addEventListener("click", function () {
-    // Continue with your existing click event logic here
-    // ...
-
-    // Reset the button position after a delay (adjust the delay as needed)
-    setTimeout(function () {
-        noButton.style.transform = "translate(0, 0)"; // Reset to original position
-    }, 500); // Example delay of 500 milliseconds
-});
