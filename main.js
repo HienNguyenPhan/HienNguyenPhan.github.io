@@ -64,7 +64,7 @@ abort.addEventListener("click", function () {
 
 var no = document.getElementById("no");
 
-no.addEventListener("mouseover", function () {
+no.addEventListener("onmouseover", function () {
     // Set a random position for the button
     var newX = Math.floor(Math.random() * window.innerWidth - noButton.offsetWidth);
     var newY = Math.floor(Math.random() * window.innerHeight - noButton.offsetHeight);
